@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <title>YelpCamp</title>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        -->
+
+
+
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script> 
+ <!-- ========== Meta Tags ========== -->
+ <meta charset="UTF-8">
+ <meta name="description" content="Cocoon -Portfolio">
+ <meta name="keywords" content="Cocoon , Portfolio">
+ <meta name="author" content="Pharaohlab">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- ========== Title ========== -->
+ <title> Maicki</title>
+ <!-- ========== Favicon Ico ========== -->
+ <!--<link rel="icon" href="fav.ico">-->
+ <!-- ========== STYLESHEETS ========== -->
+ <!-- Bootstrap CSS -->
+ <link href="/stylesheets/assets/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Fonts Icon CSS -->
+ <!-- <link href="/stylesheets/assets/css/font-awesome.min.css" rel="stylesheet"> -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <!-- <link href="/stylesheets/assets/css/et-line.css" rel="stylesheet"> -->
+ <!-- <link href="/stylesheets/assets/css/ionicons.min.css" rel="stylesheet"> -->
+ <!-- Carousel CSS -->
+ <link href="/stylesheets/assets/css/slick.css" rel="stylesheet">
+ <!-- Magnific-popup -->
+ <link rel="stylesheet" href="/stylesheets/assets/css/magnific-popup.css">
+ <!-- Animate CSS -->
+ <link rel="stylesheet" href="/stylesheets/assets/css/animate.min.css">
+ <!-- Custom styles for this template -->
+ <link href="/stylesheets/assets/css/main.css" rel="stylesheet">
+
+
+
+
+
+    </head>
+    <body>
+    <!-- <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">YelpCamp</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                    <% } else { %>
+                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     -->
+    
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-3 col-md-4  col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="#">
+                    <img src="stylesheets/assets/img/Mai4ka.png" alt="">
+                    <!-- <img src="../../public/images/logo.png" alt=""/> -->
+                    <!-- assets/img/logo.png  ova od src"" e ivadeno za logoto-->
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section" style="width: 60%;"  >
+                <ul class="menu_nav" >
+                    <li class="active">
+                        <a href="/">
+                            Дома
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/campgrounds">
+                            Маичките
+                        </a>
+                    </li>
+                    <!-- <li >
+                        <a style="width: 90%;" href="about.html">
+                            За нас
+                        </a>
+                    </li> -->
+                
+                   
+                    <li>
+                        <a href="contact.html">
+                            Контакт
+                        </a>
+                    </li>
+
+
+                    <% if(!currentUser){ %>
+                        <li><a href="/login">LogIn</a></li>
+                        <li><a href="/register">SineUp</a></li>
+                        <% } else{ %>
+                            <li><a href="campgrounds/new">Додади маичка</a></li>
+                        <li><a href="/logout">Одлогирај се</a></li>
+                        <li><a>Sined up as: <%= currentUser.username %> </a></li>
+                        <% } %>
+
+<!-- 
+                    <li>
+                        <a href="/login">
+                            Логирај се
+                        </a> -->
+
+                    </li>
+                </ul>
+            </div>
+            <!--main menu end -->
+
+            <!--filter menu -->
+            <div class="side_menu_section">
+                <h4 class="side_title">Филтрирај ги според:</h4>
+     
+
+
+
+                <ul    class="filter_nav">
+                    <li  data-filter="*" class="active"><a href="/campgrounds" >Сите</a></li>
+                    <li data-filter=".popularni"> <a href="/campgrounds/popularni">Поуларни</a></li>
+                    <li data-filter=".zargonski"><a href="/campgrounds/zargonski">Жаргонски</a></li>
+                    <li data-filter=".photography"><a href="/campgrounds/anime">Аниме</a></li>
+                    <li data-filter=".architecture"><a href="/campgrounds/marvelidc">Marvel/DC</a></li>
+                </ul>
+
+
+<!--                 
+                <ul  id="filtr-container"  class="filter_nav">
+                    <li  data-filter="*" class="active"><a href="javascript:void(0)" >Сите</a></li>
+                    <li data-filter=".popularni"> <a href="/popularni">Поуларни</a></li>
+                    <li data-filter=".zargonski"><a href="javascript:void(0)">Жаргонски</a></li>
+                    <li data-filter=".photography"><a href="javascript:void(0)">Аниме</a></li>
+                    <li data-filter=".architecture"><a href="javascript:void(0)">Марвел</a></li>
+                </ul> -->
+            </div>
+            <!--filter menu end -->
+
+            <!--social and copyright -->
+            <div class="side_menu_bottom">
+                <div class="side_menu_bottom_inner">
+                    <div class="copy_right">
+                        
+                        <ul class="social_menu">
+                            <li>
+                                <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <ion-icon name="logo-instagram"></ion-icon></a>
+                            </li>
+                        </ul>
+                        <p>Ѕвонете на:</p>
+                        <p>+389 71 228 091</p>
+                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                         <p class="copyright">
+                            &copy;<script>document.write(new Date().getFullYear());</script> by Dimitar</a></p>
+                       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!--social and copyright end -->
+
+        </div>
+        <!--=================== side menu end====================-->
+

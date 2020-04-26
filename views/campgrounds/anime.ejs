@@ -1,0 +1,55 @@
+<% include ../partials/header %> 
+
+
+
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-9 col-md-7 col-12 body_block  align-content-center">
+            <div class="portfolio">
+                <div class="container-fluid">
+                    <!--=================== masaonry portfolio start====================-->
+                    <div class="grid  justify-content-center no-gutters">  
+                        <div class=" col-sm-12 col-md-6 col-lg-12">
+
+                         <!-- proba so for each MAICKI -->
+                         <div class="row">
+
+                            <% campgrounds.forEach(function(campground){ %>
+                                <% if(campground.kategorija == "anime"){ %>
+
+                                    <div class="col-md-3 col-sm-6 col-lg-4 ">
+                                        <div class="card " style="width: 18rem;">
+                                            <img class="card-img-top" src="<%= campground.image %>" alt="Card image cap">
+                                            <div class="card-body">
+                                            <p id="ime" class="card-title"><%= campground.name %></p>
+                                            <p id="cena"><%= campground.kategorija %></p>
+                                            <!-- <button type="button" onclick="myFunction()">Try it</button> -->
+                                            <a href="#" class="btn btn-primary">Означи</a>
+                                            </div>
+                                        </div>    
+                                    </div>
+
+                                <% }  %>
+                            <% });  %>
+                           
+                           
+                         </div>
+                          <!-- proba so for each MAICKI -->
+                        </div>
+
+
+
+
+                    </div>
+                    <!--=================== masaonry portfolio end====================-->
+                </div>
+            </div>
+        </div>
+        <!--=================== content body end ====================-->
+    </div>
+</div>
+
+
+
+
+<% include ../partials/footer %>

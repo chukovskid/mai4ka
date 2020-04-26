@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+    <!-- <div class="row"> -->
+        <div style="width: 30%; margin: 25px auto;">
+            <h1 style="text-align: center">Нова Маи4ка!</h1>
+
+            <form action="/campgrounds" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[name]" placeholder="Име">
+                </div>
+                <div class="form-group">
+                    <label for="image">Слика</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <!-- <div class="form-group">
+                    <input class="form-control" type="number" name="campground[cena]" placeholder="Cena">
+                </div> -->
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[kategorija]" placeholder="Категорија">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="campground[cena]" placeholder="Цена">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[creator]" placeholder="Креирал">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[description]" placeholder="Коментарче">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+<% include ../partials/footer %>
+
