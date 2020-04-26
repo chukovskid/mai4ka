@@ -113,7 +113,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
           req.flash('error', err.message);
           return res.redirect('back');
         }
-        res.redirect('/campgrounds/' + campground.id);
+        res.redirect('/mai4ki/' + campground.id);
       });
     });
 });
@@ -171,7 +171,7 @@ router.put("/:id", upload.single('image'), function(req, res){
             campground.description = req.body.description;
             campground.save();
             req.flash("success","Successfully Updated!");
-            res.redirect("/campgrounds/" + campground._id);
+            res.redirect("/mai4ki/" + campground._id);
         }
     });
 });
@@ -186,7 +186,7 @@ router.delete('/:id', function(req, res) {
         await cloudinary.v2.uploader.destroy(campground.imageId);
         campground.remove();
         req.flash('success', 'Campground deleted successfully!');
-        res.redirect('/campgrounds');
+        res.redirect('/mai4ki');
     } catch(err) {
         if(err) {
           req.flash("error", err.message);
