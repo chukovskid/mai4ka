@@ -96,7 +96,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/campgrounds">
+                        <a href="/mai4ki">
                             Маичките
                         </a>
                     </li>
@@ -115,10 +115,11 @@
 
 
                     <% if(!currentUser){ %>
-                        <li><a href="/login">LogIn</a></li>
-                        <li><a href="/register">SineUp</a></li>
+                        <hr>
+                        <li><a href="/login">Логирај се</a></li>
+                        <li><a href="/register">Регистрирај се</a></li>
                         <% } else{ %>
-                            <li><a href="campgrounds/new">Додади маичка</a></li>
+                            <li><a href="mai4ki/new">Додади маичка</a></li>
                         <li><a href="/logout">Одлогирај се</a></li>
                         <li><a>Sined up as: <%= currentUser.username %> </a></li>
                         <% } %>
@@ -142,11 +143,11 @@
 
 
                 <ul    class="filter_nav">
-                    <li  data-filter="*" class="active"><a href="/campgrounds" >Сите</a></li>
-                    <li data-filter=".popularni"> <a href="/campgrounds/popularni">Поуларни</a></li>
-                    <li data-filter=".zargonski"><a href="/campgrounds/zargonski">Жаргонски</a></li>
-                    <li data-filter=".photography"><a href="/campgrounds/anime">Аниме</a></li>
-                    <li data-filter=".architecture"><a href="/campgrounds/marvelidc">Marvel/DC</a></li>
+                    <li  data-filter="*" class="active"><a href="/mai4ki" >Сите</a></li>
+                    <li data-filter=".popularni"> <a href="/mai4ki/popularni">Поуларни</a></li>
+                    <li data-filter=".zargonski"><a href="/mai4ki/zargonski">Жаргонски</a></li>
+                    <li data-filter=".photography"><a href="/mai4ki/anime">Аниме</a></li>
+                    <li data-filter=".architecture"><a href="/mai4ki/marvelidc">Marvel/DC</a></li>
                 </ul>
 
 
